@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"io"
 	"log"
+	"mime"
 	"sync"
 
 	"github.com/fullstorydev/grpcurl"
@@ -14,7 +15,6 @@ import (
 	"google.golang.org/genproto/googleapis/api/httpbody"
 	"google.golang.org/grpc/metadata"
 	"google.golang.org/grpc/status"
-	"mime"
 )
 
 // FileResponse describes a GRPC response.
