@@ -113,7 +113,8 @@ func sendRequest(ctx context.Context) error {
 		}
 
 		fPath := path.Join(opts.OutputFileLocation, fName)
-		if f, err = os.Create(fPath); err != nil {
+		f, err = os.Create(fPath) //nolint:gosec // that's not a file inclusion
+		if err != nil {
 			return fmt.Errorf("create file at %q: %w", fPath, err)
 		}
 	}
