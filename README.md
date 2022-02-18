@@ -4,7 +4,8 @@ Small utility to download files through grpc. Currently, only files received via
 are supported.
 
 ### install
-`go install github.com/Semior001/grpcwget@v0.1.1`
+`go install github.com/Semior001/grpcwget@v0.1.1` or via downloading the binary
+in the releases.
 
 ## options
 ```
