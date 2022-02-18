@@ -12,7 +12,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/Semior001/grpcwget/app/gurl"
+	"github.com/Semior001/grpcwget/gurl"
 	"github.com/google/uuid"
 	"github.com/hashicorp/logutils"
 	"github.com/jessevdk/go-flags"

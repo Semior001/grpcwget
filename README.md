@@ -3,6 +3,9 @@ Small utility to download files through grpc. Currently, only files received via
 [google.api.HttpBody](https://github.com/googleapis/googleapis/blob/master/google/api/httpbody.proto) 
 are supported.
 
+### install
+`go install github.com/Semior001/grpcwget@v0.1.1`
+
 ## options
 ```
 Application Options:
