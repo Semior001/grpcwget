@@ -1,0 +1,17 @@
+# https://taskfile.dev
+
+version: '3'
+
+tasks:
+  build:
+    cmds:
+      - GOOS=windows GOARCH=386 go build -ldflags "-X 'main.version={{.VERSION}}' -s -w" -o builds/grpcwget_386.exe .
+      - GOOS=linux GOARCH=386 go build -ldflags "-X 'main.version={{.VERSION}}' -s -w" -o builds/grpcwget_linux_386 .
+      - GOOS=darwin GOARCH=amd64 go build -ldflags "-X 'main.version={{.VERSION}}' -s -w" -o builds/grpcwget_macos_intel .
+      - GOOS=darwin GOARCH=arm64 go build -ldflags "-X 'main.version={{.VERSION}}' -s -w" -o builds/grpcwget_macos_m1 .
+    desc: Build the application at ./build
+    dir: .
+    silent: true
+    vars:
+      VERSION:
+        sh: git describe --tags --long
